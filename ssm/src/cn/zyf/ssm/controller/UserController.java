@@ -26,6 +26,13 @@ public class UserController {
 		return "userList";
 	}
 	
+	@RequestMapping("/insert")
+	public String insert(Integer userId) {
+		
+		//删除成功后重新得到跳转到列表
+		return "redirect:/user/list.do";
+	}
+	
 	@RequestMapping("/delete")
 	public String delete(Integer userId) {
 		
